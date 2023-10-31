@@ -6,33 +6,29 @@ const number = (n: number) =>{
         let k = Spliting.pop();
         w += `${k}`
     }
-    let b= w.split(" ").map(Number)
 
-    const highestDigit = Math.max(...b);
-const lowestDigit = Math.min(...b);
-
-    return w
-
-  
+    return w  
 }
 
 let numbes = 1235 
 console.log(number(numbes))
 
-
-let numbers = 1235 
-
-let z = numbers.toString().split("")
-let b= z.map(Number)
+const largeNum = (n: number) =>{
+    let z = n.toString().split("")
+    let b= z.map(Number)
 
     const highestDigit = Math.max(...b);
-const lowestDigit = Math.min(...b);
-
-console.log(highestDigit)
-console.log(lowestDigit)
-let w: string = ""
-
-while (z.length !==0) {
-    // let k = z.pop();
-    // w += `${k}`
+    return highestDigit
 }
+
+const smallNum = (n: number) =>{
+    let z = n.toString().split("")
+    let b= z.map(Number)
+    
+    const lowestDigit = Math.min(...b);
+    return lowestDigit
+}
+
+
+console.log(largeNum(18972453))
+console.log(smallNum(18972453))

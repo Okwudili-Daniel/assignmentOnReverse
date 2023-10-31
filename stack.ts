@@ -87,31 +87,3 @@ let numbes = 1235
 console.log(number(numbes))
 
 
-// let numbers = 1235 
-
-// let z = numbers.toString().split("")
-// let b= z.map(Number)
-
-//     const highestDigit = Math.max(...b);
-// const lowestDigit = Math.min(...b);
-
-
-const largeNum = (n: number) =>{
-    let z = n.toString().split("")
-    let b= z.map(Number)
-
-    const highestDigit = Math.max(...b);
-    return highestDigit
-}
-
-const smallNum = (n: number) =>{
-    let z = n.toString().split("")
-    let b= z.map(Number)
-    
-    const lowestDigit = Math.min(...b);
-    return lowestDigit
-}
-
-
-console.log(largeNum(18972453))
-console.log(smallNum(18972453))
