@@ -1,45 +1,45 @@
 console.clear();
 
-class Stack{
-    public stack: Array<number>;
+// class Stack{
+//     public stack: Array<number>;
 
-    constructor(){
-        this.stack= [];
-    }
+//     constructor(){
+//         this.stack= [];
+//     }
 
-    addValue(val: number){
-        this.stack.pop();
+//     addValue(val: number){
+//         this.stack.pop();
 
-        return this.stack;
-    }
-    removeValue(val: number){
-        this.stack.pop();
+//         return this.stack;
+//     }
+//     removeValue(val: number){
+//         this.stack.pop();
 
-        return this.stack;
-    }
+//         return this.stack;
+//     }
 
-    size(){
-        return this.stack.length;
-    }
+//     size(){
+//         return this.stack.length;
+//     }
 
-    peek(){
-        return this.stack[this.size() - 1];
-    }
+//     peek(){
+//         return this.stack[this.size() - 1];
+//     }
 
-    isEmpty(){
-        if (this.size() === 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//     isEmpty(){
+//         if (this.size() === 0) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
 
-    p(){
-        let prob = ["Lagos sky appears to be white and Sunny today"]
+//     p(){
+//         let prob = ["Lagos sky appears to be white and Sunny today"]
 
-        console.log(prob.reverse())
-    }    
-}
+//         console.log(prob.reverse())
+//     }    
+// }
 
 // let stack = new Stack();
 
@@ -78,12 +78,7 @@ const number = (n: number) =>{
         let k = Spliting.pop();
         w += `${k}`
     }
-    let b= w.split(" ").map(Number)
-
-    const highestDigit = Math.max(...b);
-const lowestDigit = Math.min(...b);
-
-    return w
+    return parseInt(w)
 
   
 }
@@ -92,19 +87,31 @@ let numbes = 1235
 console.log(number(numbes))
 
 
-let numbers = 1235 
+// let numbers = 1235 
 
-let z = numbers.toString().split("")
-let b= z.map(Number)
+// let z = numbers.toString().split("")
+// let b= z.map(Number)
+
+//     const highestDigit = Math.max(...b);
+// const lowestDigit = Math.min(...b);
+
+
+const largeNum = (n: number) =>{
+    let z = n.toString().split("")
+    let b= z.map(Number)
 
     const highestDigit = Math.max(...b);
-const lowestDigit = Math.min(...b);
-
-console.log(highestDigit)
-console.log(lowestDigit)
-let w: string = ""
-
-while (z.length !==0) {
-    // let k = z.pop();
-    // w += `${k}`
+    return highestDigit
 }
+
+const smallNum = (n: number) =>{
+    let z = n.toString().split("")
+    let b= z.map(Number)
+    
+    const lowestDigit = Math.min(...b);
+    return lowestDigit
+}
+
+
+console.log(largeNum(18972453))
+console.log(smallNum(18972453))
